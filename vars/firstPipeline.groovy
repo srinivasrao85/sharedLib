@@ -9,7 +9,7 @@ def call(Map pipelineParams){
     pipeline {
         agent any
         stages{
-            stage('echo'){
+            stage('echo1'){
                 steps{
                     script{
                         echo "printing sum of 2 numbers"
