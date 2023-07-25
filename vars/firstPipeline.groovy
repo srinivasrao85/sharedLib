@@ -5,19 +5,19 @@ def call(Map pipelineParams){
     environment{
         APP_NAME = "${pipelineParams.appName}"
     }
-      pipeline{
-      agent any
-      stages{
-        stage('echo'){
-            steps{
-                script{
-                    echo "printig sum of 2 numbers"
-                    println cal.add(3,4)
-                    echo "Microservice name is ${APP_NAME}"
+    pipeline {
+        agent any
+        stages{
+            stage('echo'){
+                steps{
+                    script{
+                        echo "printig sum of 2 numbers"
+                        println cal.add(3,4)
+                        echo "Microservice name is ${APP_NAME}"
+                    }
                 }
             }
         }
-    }
+    }  
 }
 
-}
