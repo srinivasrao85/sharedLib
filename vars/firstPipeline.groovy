@@ -3,13 +3,16 @@ import com.i27academy.builds.Calculator
 def call(Map pipelineParams){
     library('com.i27academy.slb')
     Calculator cal = new Calculator(this)
+    environment{
+        APP_NAME = "${pipelineParams.appName}"
+    }
     pipeline {
         agent any
         environment {
         APP_NAME = "${pipelineParams.appName}"
         }
         stages{
-            stage('echo'){
+            stage('echo1'){
                 steps{
                     script{
                         echo "printing sum of 2 numbers"
