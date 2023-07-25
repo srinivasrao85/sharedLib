@@ -14,7 +14,7 @@ def call(Map pipelineParams){
                     script{
                         echo "printig sum of 2 numbers"
                         println cal.add(3,4)
-                        echo "Microservice name is ${APP_NAME}"
+                        echo "Microservice name is ${params.APP_NAME}"
                     }
                 }
             }
